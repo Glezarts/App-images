@@ -12,7 +12,28 @@
 </head>
 
 <body>
-    
+    <nav>
+        <a href="/">Mostrar imágenes</a>
+        <a href="/add-img">Añadir imagen</a>
+
+    </nav>
+
+    <form class="w3-container" action="anadir-foto" method="POST">
+        <p>
+          <label>Título</label>
+          <input class="w3-input w3-hover-light-blue" type="text" name="titulo" maxlength="10" pattern="[A-Za-z0-9_]*" required="">
+        </p>
+        <p>   
+          <label>Url de la imagen</label>
+          <input class="w3-input w3-hover-light-blue" type="url" name="url" required="">
+        </p>
+        <p>
+          <input class="w3-input w3-hover-light-blue" type="date" name="fecha" required="">
+          </p><div class="w3-center">
+            <button style="font-size:24px">Envía</button>
+          </div>
+        <p></p>
+      </form>
 
 </body>
 

@@ -1,15 +1,19 @@
 const express = require('express')
 const app = express()
 
+const home = require('views/index')
+
+
 app.set('view engine', 'ejs')
-//app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: false}))
 
-//const catsRoutes = require('./routes/cats')
+const imagesRoutes = require('./routes/images')
 
-//app.use('/cats', catsRoutes)
+app.use('/images', imagesRoutes)
 
 app.get('/', (req, res) => {
-    res.send('Hola')
+   
+    res.render(home)
 })
 
 app.listen(3000)
