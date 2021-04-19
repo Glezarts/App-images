@@ -1,13 +1,27 @@
-exports.getAllimages = (req,res)=>{
-    const allphotos = photos.findAll()
+const photos = require("../models/dataphotos")
 
-    res.render('views/index', {photos: allphotos})
+exports.getAllPhotos = (req,res)=>{
+    const allphotos = photos.findAll()
+    console.log(allphotos);
+    res.render('index', {photos: allphotos})
 }
 
 
 
 
 
-exports.getAddCat = (req, res) => {
-    res.render('views/add-img')
+exports.getAddPhoto = (req, res) => {
+    res.render('add-img')
+}
+
+exports.postAddPhoto = (req, res) =>{
+
+    const name = req.body.name
+    const url = req.body.url
+    const date = new Date(); 
+
+    photos.addPhoto(name, url, date)
+
+    res.redirect('/');
+
 }

@@ -1,4 +1,4 @@
-hdfgh<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,6 +17,38 @@ hdfgh<!DOCTYPE html>
         <a href="/add-img">Añadir imagen</a>
 
     </nav>
+    <div>
+       <h1> holaaaa</h1>
+        <h1>List of images</h1>
+            </h3>
+          
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% photos.forEach( (photo)=> { %>
+                            <tr>
+
+                                <td>
+                                    <%= photo.name %>
+                                </td>
+                                <td>
+                                    <img src=<%= photo.url %>/>
+                                </td>
+                                <td>
+                                    <%= photo.date %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+            
+  
+    </div>
 
 </body>
 

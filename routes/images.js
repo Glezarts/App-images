@@ -7,7 +7,13 @@ const photosController = require('../controllers/photos-controller')
 
 
 
-router.get('/', photosController.getAllimages)
+router.get('/', photosController.getAllPhotos)
+
+
+
+router.get('/add-img', photosController.getAddPhoto)
+
+router.post('/add-img', photosController.postAddPhoto)
 
 
 
