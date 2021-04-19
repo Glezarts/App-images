@@ -13,7 +13,7 @@ router.get('/', photosController.getAllPhotos)
 
 router.get('/add-img', photosController.getAddPhoto)
 
-router.post('/add-img', photosController.postAddPhoto)
+router.post('/add-photo', photosController.postAddPhoto)
 
 
 

@@ -15,12 +15,22 @@ exports.getAddPhoto = (req, res) => {
 }
 
 exports.postAddPhoto = (req, res) =>{
+    const urlFalsa ='https://picsum.photos/id/237/200/300';
 
-    const name = req.body.name
-    const url = req.body.url
-    const date = new Date(); 
+    const titulo = req.body.titulo;
+    const url = req.body.url;
+    const date = req.body.date; 
 
-    photos.addPhoto(name, url, date)
+    function existeImg (url){
+
+        if (url == ) {
+          
+        }
+    }
+
+    existeImg();
+
+    photos.addPhoto(titulo, url, date)
 
     res.redirect('/');
 

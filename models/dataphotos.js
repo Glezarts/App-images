@@ -1,18 +1,19 @@
+
 const BBDD_photos = [{
     id: 1,
-    name: 'Loki',
-    url: 'Vulgaris',
-    date: ''
+    titulo: 'Loki',
+    url: 'https://picsum.photos/id/237/200/300',
+    date: '16/04/2012'
 }, {
     id: 2,
-    name: 2,
-    url: 'Canela',
-    date: ''
+    titulo: 'Hola',
+    url: 'https://picsum.photos/seed/picsum/200/300',
+    date: '29/03/2021'
 }, {
     id: 3,
-    name: 'Tach',
-    url: 'Carey',
-    date: ''
+    titulo: 'Tach',
+    url: 'https://picsum.photos/200/300?grayscale',
+    date: '12/09/2013'
 }]
 const uuid = require('uuid')
 
@@ -20,13 +21,14 @@ exports.findAll = () => {
     return BBDD_photos
 }
 
-exports.addPhoto = (name, race) => {
+exports.addPhoto = (titulo, url, date) => {
+   
     const newPhoto =
     {
         id: uuid.v1(),
-        name: name,
+        titulo: titulo,
         url: url,
-        date: new date()
+        date: date
     }
 
     // El hecho de mantener en el modelo la manera que insertamos un nuevo registro en la BBDD; nos permite que si en el futuro nuestra BBDD cambia, solo tengamos que realizar las modificaciones en este fichero 
